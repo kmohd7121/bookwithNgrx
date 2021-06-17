@@ -1,0 +1,32 @@
+<div class="container">
+    <div style="height: 50px; text-align: center;">
+        <h1>Details Of Data</h1>
+    </div>
+    <br>
+    <button class="btn btn-primary" routerLink="/addbook">Add Books</button>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">BOOK NAME</th>
+            <th scope="col">AUTHOR</th>
+            <th scope="col">PUBLISHER</th>
+            <th scope="col">PUBLISHERAT</th>
+           
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of data">
+            <td>{{i.id}}</td>
+            <td>{{i.bookName}}</td>
+            <td>{{i.author}}</td>
+            <td>{{i.publisher}}</td>
+            <td>{{i.publishedAt}}</td>
+            <td><button class="btn btn-danger" (click)="delete(i.id)">Delete</button></td>
+            <td><button class="btn btn-succesive" routerLink="/edit">Edit</button></td>
+          </tr>
+          
+        </tbody>
+      </table>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,33 @@
+<!-- <p>add-book works!</p> -->
+
+<div class="container">
+    <form [formGroup]="bookForm" (ngSubmit)="onSubmit()">
+        <div class="from-group col-6">
+            <!-- {{bookForm.value | json}} -->
+          <label >Id</label>
+          <input type="text" formControlName="id" class="form-control">
+        </div>
+        <br>
+        <div class="from-group col-6">
+          <label >BOOK NAME</label>
+          <input type="text" formControlName="bookname" class="form-control">
+        </div>
+        <br>
+        <div class="from-group col-6">
+            <label >AUTHOR</label>
+            <input type="text" formControlName="author" class="form-control">
+        </div>
+        <br>
+        <div class="from-group col-6">
+            <label >PUBLISHER</label>
+            <input type="text" formControlName="publisher" class="form-control">
+        </div>
+        <br>
+        <div class="from-group col-6">
+            <label >PUBLISHEDAT</label>
+            <input type="text" formControlName="publishedat" class="form-control">
+          </div>
+          <br>
+      <button class="btn btn-primary " type="submit">Add</button>
+      </form>
+</div>
